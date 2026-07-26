@@ -8,6 +8,7 @@ class TestCase(BaseModel):
     expected_status: int = Field(..., description="예상 응답 코드")
     description: str = Field(..., description="테스트 목적")
     is_edge_case: bool = Field(..., description="엣지 케이스 여부")
+    final_report: str
 
 class TestScenario(BaseModel):
     test_cases: List[TestCase]
